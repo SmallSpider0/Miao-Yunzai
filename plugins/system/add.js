@@ -422,7 +422,8 @@ export class add extends plugin {
     if (msg[0] && msg[0].local) {
       if (fs.existsSync(msg[0].local)) {
         let tmp = segment.image(msg[0].local)
-        tmp.asface = msg[0].asface
+        // tmp.asface = msg[0].asface
+        tmp.asface = false
         msg = tmp
       } else {
         // this.e.reply(`表情已删除：${keyWord}`)
