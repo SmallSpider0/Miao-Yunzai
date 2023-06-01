@@ -99,7 +99,7 @@ export class update extends plugin {
   async runUpdate (plugin = '') {
     this.isNowUp = false
 
-    let cm = 'git pull --no-rebase'
+    let cm = 'git fetch upstream && git checkout master && git merge upstream/master && git pull && git push origin master'
 
     let type = '更新'
     if (this.e.msg.includes('强制')) {
